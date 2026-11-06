@@ -1,0 +1,118 @@
+{
+  "archive_sha256": "0df199c70c6b92a34c658ba02796120b60dbbb7d5316dac17b62c9313d7128f7",
+  "id": "v1.1.2",
+  "files": {
+    "manosaba_Data/StreamingAssets/aa/StandaloneWindows64/general-data_assets_all.bundle": {
+      "size": 338096,
+      "sha256": "f978dc3deb6986167ffec194a31167f0f6780cf48cde25a212e9d27e662cd6cb"
+    },
+    "manosaba_Data/StreamingAssets/aa/StandaloneWindows64/general-localization-zhhans-scripts-act01_chapter01_advbad_assets_all.bundle": {
+      "size": 579812,
+      "sha256": "1dc29a785d44e5a990307b1d009f5b87206ba580b5e925820594768c356566c9"
+    },
+    "manosaba_Data/StreamingAssets/aa/StandaloneWindows64/general-localization-zhhans-scripts-act01_chapter01_trial_assets_all.bundle": {
+      "size": 459872,
+      "sha256": "383fa6927bfb0977231196d4b9c286aed5e7d057c377a37d585f822926b901d8"
+    },
+    "manosaba_Data/StreamingAssets/aa/StandaloneWindows64/general-localization-zhhans-scripts-act01_chapter02_advbad_assets_all.bundle": {
+      "size": 403488,
+      "sha256": "660d7e4115dbb293c975907d44a691f23e774c7115447b5c18d066257a48438a"
+    },
+    "manosaba_Data/StreamingAssets/aa/StandaloneWindows64/general-localization-zhhans-scripts-act01_chapter02_trial_assets_all.bundle": {
+      "size": 461164,
+      "sha256": "46dccd092788b7cb681418b79cbd520ed8493420b0f372c7ccb69304b66602d9"
+    },
+    "manosaba_Data/StreamingAssets/aa/StandaloneWindows64/general-localization-zhhans-scripts-act01_chapter03_advbad_assets_all.bundle": {
+      "size": 299600,
+      "sha256": "6915bab7be33ec5e4edb5a3055cef3e4811ec94f5c9930a08eea684f420e59b8"
+    },
+    "manosaba_Data/StreamingAssets/aa/StandaloneWindows64/general-localization-zhhans-scripts-act01_chapter03_trial_assets_all.bundle": {
+      "size": 397676,
+      "sha256": "4b4ffc9172dd8e721cdbbac136bb2d1acf7b6cdbcda4f6bc1b0767c3faba7033"
+    },
+    "manosaba_Data/StreamingAssets/aa/StandaloneWindows64/general-localization-zhhans-scripts-act01_chapter04_advbad_assets_all.bundle": {
+      "size": 155620,
+      "sha256": "1d0bee07ffe9aed876f1e67873b3f84874bb43ce4a56398e8b5833a51c04e05c"
+    },
+    "manosaba_Data/StreamingAssets/aa/StandaloneWindows64/general-localization-zhhans-scripts-act01_chapter04_trial_assets_all.bundle": {
+      "size": 254104,
+      "sha256": "0dc3c86835d7ddf215c497b0dd0c95dfbe7d814699df81be516830668caf7ecc"
+    },
+    "manosaba_Data/StreamingAssets/aa/StandaloneWindows64/general-localization-zhhans-scripts-act01_chapter05_advbad_assets_all.bundle": {
+      "size": 240084,
+      "sha256": "74e3c0d68466731eee811fa994dc4cc9e67e698adf69653ee058a6afc51df1d0"
+    },
+    "manosaba_Data/StreamingAssets/aa/StandaloneWindows64/general-localization-zhhans-scripts-act01_chapter05_trial_assets_all.bundle": {
+      "size": 322756,
+      "sha256": "2f4112b6fa952cd459d0f07d504f531a8aebfc18206a743938064bf29f4c562f"
+    },
+    "manosaba_Data/StreamingAssets/aa/StandaloneWindows64/general-localization-zhhans-scripts-act02_chapter01_advbad_assets_all.bundle": {
+      "size": 420880,
+      "sha256": "4b502985b21d1f704b8ca83e7da7b14913fb4008d6d3f7dae1e160c09438c5bb"
+    },
+    "manosaba_Data/StreamingAssets/aa/StandaloneWindows64/general-localization-zhhans-scripts-act02_chapter01_trial_assets_all.bundle": {
+      "size": 443292,
+      "sha256": "24e7cf62b31bb026a121770d2d1fcc33a78115077c0502fd695ea8e74f6d0c9e"
+    },
+    "manosaba_Data/StreamingAssets/aa/StandaloneWindows64/general-localization-zhhans-scripts-act02_chapter02_advbad_assets_all.bundle": {
+      "size": 278140,
+      "sha256": "24641025ed1c7e7470ee28877d5f3ae9010a66fa9e69489bbe02f40a91329c29"
+    },
+    "manosaba_Data/StreamingAssets/aa/StandaloneWindows64/general-localization-zhhans-scripts-act02_chapter02_trial_assets_all.bundle": {
+      "size": 359740,
+      "sha256": "7fc52cf3ad0817fa636797f942f9497927528581e412bc41a7c00596e57734c2"
+    },
+    "manosaba_Data/StreamingAssets/aa/StandaloneWindows64/general-localization-zhhans-scripts-act02_chapter03_advbad_assets_all.bundle": {
+      "size": 219836,
+      "sha256": "25e24594fea3ddc9bca09ba7196a92c840090569c8c5756296bcb4d48519158d"
+    },
+    "manosaba_Data/StreamingAssets/aa/StandaloneWindows64/general-localization-zhhans-scripts-act02_chapter03_trial_assets_all.bundle": {
+      "size": 366596,
+      "sha256": "fd734e788c8bdec717ef60104a3bcf9027782f4790e5a2f8e30fb2b4a6f86d9b"
+    },
+    "manosaba_Data/StreamingAssets/aa/StandaloneWindows64/general-localization-zhhans-scripts-act02_chapter04_advbad_assets_all.bundle": {
+      "size": 307492,
+      "sha256": "2ce41dd217e13841fa58e24b1064858938be8c24c9aaa77d529bf9e2f9392258"
+    },
+    "manosaba_Data/StreamingAssets/aa/StandaloneWindows64/general-localization-zhhans-scripts-act02_chapter04_trial_assets_all.bundle": {
+      "size": 298240,
+      "sha256": "a4664b05839f66b0191cae158a2f4a719c8970f1c1ffbf5ea82742862b431f05"
+    },
+    "manosaba_Data/StreamingAssets/aa/StandaloneWindows64/general-localization-zhhans-scripts-act02_chapter05_advbad_assets_all.bundle": {
+      "size": 170796,
+      "sha256": "7978cdaf8deb6edb3578abbed07588322c4d906dffe5c229ca62f1cc2d0decdf"
+    },
+    "manosaba_Data/StreamingAssets/aa/StandaloneWindows64/general-localization-zhhans-scripts-act02_chapter05_trial_assets_all.bundle": {
+      "size": 528760,
+      "sha256": "8dadf9a34c4b7b17adcba1ec01b4fa1f3538b6512e1ea90aff782c65dba5c8ae"
+    },
+    "manosaba_Data/StreamingAssets/aa/StandaloneWindows64/general-localization-zhhans-scripts-act02_chapter06_trial_assets_all.bundle": {
+      "size": 254848,
+      "sha256": "a8c3414ae029858606f795e57d45a5acd4eb0a0870d3f8230cb6ce6938bbfcad"
+    },
+    "manosaba_Data/StreamingAssets/aa/StandaloneWindows64/general-localization-zhhans-scripts-common_assets_all.bundle": {
+      "size": 100652,
+      "sha256": "1f2d41b3473d6082da4c0c2ec909a146780bd9947675c5bd4488781c8fd6e842"
+    },
+    "manosaba_Data/StreamingAssets/aa/StandaloneWindows64/general-localization-zhhans-scripts-system_assets_all.bundle": {
+      "size": 5688,
+      "sha256": "14550565b120312b06d18f5ab7c415d9b3ac8d27d952319fe27567f524525aa2"
+    },
+    "manosaba_Data/StreamingAssets/aa/StandaloneWindows64/general-localization-zhhans-text_assets_all.bundle": {
+      "size": 11264,
+      "sha256": "3ebdc2e7bff65ec88f5dc7f27cd77e4a66db3507f7987e2678436ba14108a794"
+    },
+    "manosaba_Data/StreamingAssets/aa/StandaloneWindows64/general-sprites_assets_all.bundle": {
+      "size": 52265112,
+      "sha256": "657b02ffc73e3327f2c5c70c918257b6dbdc585a3ca21286ce39ab19ff05bfb6"
+    },
+    "manosaba_Data/StreamingAssets/aa/StandaloneWindows64/naninovel-spawn_assets_all.bundle": {
+      "size": 1073029592,
+      "sha256": "5b453e4b5e2978a92b065158e17d42114881a919cbacb5920fdf5322b799b43c"
+    },
+    "manosaba_Data/StreamingAssets/aa/StandaloneWindows64/naninovel-ui_assets_all.bundle": {
+      "size": 1827188,
+      "sha256": "e7cc5142133dcca0dc7ac60ccb84ad28ced3c81351662273fc9f5af846bd1f5e"
+    }
+  }
+}

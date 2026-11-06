@@ -1,0 +1,2 @@
+# Runtime application uses the standard library; this is only for release builds.
+pyinstaller==6.22.3

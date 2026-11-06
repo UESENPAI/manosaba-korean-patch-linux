@@ -1,0 +1,94 @@
+name: Tests and Linux release
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run synthetic installer and packaging tests
+        run: python3 -m unittest discover -s tests -v
+      - name: Check shell launcher
+        run: sh -n install.sh
+      - name: Verify source packaging
+        run: python3 tools/build_release.py --output-dir build/source-check
+
+  release:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && startsWith(github.event.head_commit.message, 'Release v1.1.2')
+    needs: tests
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+    concurrency:
+      group: release-v1.1.2
+      cancel-in-progress: false
+    env:
+      GH_TOKEN: ${{ github.token }}
+      VERSION: v1.1.2
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install isolated build dependencies
+        run: python3 -m pip install -r requirements-build.txt
+      - name: Build standalone Linux x86_64 patcher
+        run: python3 tools/build_native.py
+      - name: Verify bundled runtime without external Python
+        shell: bash
+        run: |
+          set -euo pipefail
+          PATH=/nonexistent build/native/manosaba-patcher --check-runtime
+          PATH=/nonexistent build/native/manosaba-patcher --help
+          python3 tools/smoke_binary.py --binary build/native/manosaba-patcher
+      - name: Build Linux and source assets
+        run: >-
+          python3 tools/build_release.py --version "$VERSION"
+          --binary build/native/manosaba-patcher
+          --notices build/native/THIRD_PARTY_LICENSES.txt
+      - name: Verify packaged launcher and checksums
+        shell: bash
+        run: |
+          set -euo pipefail
+          (cd dist && sha256sum --check SHA256SUMS)
+          mkdir -p build/extracted
+          tar -xzf "dist/manosaba-korean-patch-linux-$VERSION-linux-x86_64.tar.gz" -C build/extracted
+          package="$PWD/build/extracted/manosaba-korean-patch-linux-$VERSION"
+          PATH=/nonexistent "$package/manosaba-patcher" --check-runtime
+          PATH=/usr/bin:/bin sh "$package/install.sh" --check-runtime
+      - name: Publish stable Linux release
+        shell: bash
+        run: |
+          set -euo pipefail
+          if tag_sha=$(gh api "repos/$GITHUB_REPOSITORY/commits/$VERSION" --jq .sha 2>/dev/null); then
+            if [ "$tag_sha" != "$GITHUB_SHA" ]; then
+              echo "Existing tag points to another commit; use a new version." >&2
+              exit 1
+            fi
+          fi
+          if gh release view "$VERSION" --json isDraft,assets,url > existing-release.json 2>/dev/null; then
+            if [ "$(python3 -c 'import json; print(str(json.load(open("existing-release.json"))["isDraft"]).lower())')" = false ]; then
+              python3 -c 'import json,pathlib; r=json.load(open("existing-release.json")); expected={p.name for p in pathlib.Path("dist").iterdir()}; actual={a["name"] for a in r["assets"] if a["size"]>0}; assert expected<=actual, "Published release assets are incomplete; use a new version"; print(r["url"])'
+              exit 0
+            fi
+          else
+            gh release create "$VERSION" --target "$GITHUB_SHA" --title "$VERSION Linux x86_64 패처" --notes-file RELEASE_NOTES.md --draft
+          fi
+          gh release upload "$VERSION" dist/* --clobber
+          gh release edit "$VERSION" --draft=false --prerelease=false --latest
+          gh release view "$VERSION" --json isDraft,isPrerelease,assets,url

@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.venv/
+*.zip
+*.bundle
+*.exe
+*.dll
+*.acf
+.manosaba-ko-linux/
+.pytest_cache/
+dist/
+build/
+*.spec
