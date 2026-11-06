@@ -2,9 +2,7 @@
 
 **마법소녀의 마녀재판(마노사바)의 Windows용 한글패치를 Linux의 Steam/Proton 설치에 적용하는 도구입니다.**
 
-사용자가 별도로 구한 `manosaba_patch_v1.1.2.zip`의 경로를 입력하면 Steam에서 게임을 찾아 원본 파일을 백업하고 패치 파일을 적용합니다. **Linux x86_64용 실행 파일은 Python을 따로 설치하지 않고 사용할 수 있습니다.** ZIP 안의 프로그램은 실행하지 않습니다.
-
-**Linux/Proton에서 사용자가 실제 동작을 확인했습니다. 게임 v1.1.2에 맞춘 최초 정식 배포이며, 패처 릴리스 버전도 v1.1.2입니다.**
+사용자가 다운로드한 비공식 한글패치본 `manosaba_patch_v1.1.2.zip`의 경로를 입력하면 Steam에서 게임을 찾아 원본 파일을 백업하고 패치 파일을 적용합니다. **Linux x86_64용 실행 파일은 Python을 따로 설치하지 않고 사용할 수 있습니다.** ZIP 안의 프로그램은 실행하지 않습니다.
 
 ## 다운로드와 빠른 시작
 
@@ -182,11 +180,3 @@ sh -n install.sh
 - 릴리스 작업에서 배포 압축파일의 내용·실행 권한·체크섬을 검사하고, 독립 실행 파일의 시작과 내장 패치 프로필 로딩을 확인합니다.
 
 GitHub Actions는 모의 테스트와 셸 문법 검사를 수행합니다. `Release v1.1.2`로 시작하는 main 브랜치 커밋에서는 테스트 통과 후 Linux x86_64 실행 파일과 소스 배포본을 빌드해 정식 릴리스를 발행합니다. 배포 파일에는 `SHA256SUMS`를 함께 제공합니다.
-
-## 참고
-
-- [Valve Proton](https://github.com/ValveSoftware/Proton): Linux에서 Windows 게임을 실행하는 호환성 도구
-- [게임 Steam 상점](https://store.steampowered.com/app/3101040/)
-- [Unity의 플랫폼별 AssetBundle 안내](https://docs.unity.com/en-us/engine/6000.7/manual/assets-and-media/assets-managing-runtime/assetbundles-section/platforms)
-- [Protontricks의 Steam 설치 탐색 구현](https://github.com/Matoking/protontricks/blob/master/src/protontricks/steam.py)
-- [Flatpak Steam의 외부 드라이브 안내](https://github.com/flathub/com.valvesoftware.Steam/wiki#i-want-to-add-external-disk-for-steam-libraries)
